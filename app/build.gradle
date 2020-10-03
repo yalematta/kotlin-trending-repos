@@ -61,4 +61,7 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hiltAndroidXVersion"
     kapt "androidx.hilt:hilt-compiler:$versions.hiltAndroidXVersion"
 
+    // paging 3
+    implementation "androidx.paging:paging-runtime:$versions.pagingVersion"
+
 }
