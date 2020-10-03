@@ -3,4 +3,7 @@
     <string name="retry">Retry</string>
     <string name="results_error">Results could not be loaded</string>
     <string name="repo_name">%s / %s</string>
+    <string name="search">Search</string>
+    <string name="query">language:%s</string>
+    <string name="language_name">%s GitHub Repos</string>
 </resources>
