@@ -1,6 +1,6 @@
 package com.yalematta.trendingrepos.di
 
-import com.yalematta.trendingrepos.api.TrendingApi
+import com.yalematta.trendingrepos.api.GithubApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,13 +17,13 @@ object AppModule {
     @Singleton
     fun provideRetrofit(): Retrofit =
         Retrofit.Builder()
-            .baseUrl(TrendingApi.BASE_URL)
+            .baseUrl(GithubApi.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
     @Provides
     @Singleton
-    fun provideTrendingApi(retrofit: Retrofit): TrendingApi =
-        retrofit.create(TrendingApi::class.java)
+    fun provideTrendingApi(retrofit: Retrofit): GithubApi =
+        retrofit.create(GithubApi::class.java)
 
 }
