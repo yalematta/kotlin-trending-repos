@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 apply from: '../dependencies.gradle'
 
 android {
@@ -40,6 +41,7 @@ dependencies {
 
     // network
     implementation "com.squareup.retrofit2:retrofit:$versions.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpVersion"
 
     // coroutines
@@ -50,5 +52,11 @@ dependencies {
     // glide
     implementation "com.github.bumptech.glide:glide:$versions.glideVersion"
     kapt "com.github.bumptech.glide:compiler:$versions.glideVersion"
+
+    // dagger hilt
+    implementation "com.google.dagger:hilt-android:$versions.hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$versions.hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hiltAndroidXVersion"
+    kapt "androidx.hilt:hilt-compiler:$versions.hiltAndroidXVersion"
 
 }

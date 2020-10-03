@@ -25,4 +25,8 @@ ext.versions = [
         // glide
         glideVersion            : '4.11.0',
 
+        // dagger hilt
+        hiltVersion             : '2.28.3-alpha',
+        hiltAndroidXVersion     : '1.0.0-alpha02'
+
 ]
