@@ -25,6 +25,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -60,5 +73,8 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:$versions.hiltVersion"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hiltAndroidXVersion"
     kapt "androidx.hilt:hilt-compiler:$versions.hiltAndroidXVersion"
+
+    // paging 3
+    implementation "androidx.paging:paging-runtime:$versions.pagingVersion"
 
 }

@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_height="130dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="4dp"
     app:cardElevation="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/avatar"
             android:layout_width="75dp"
             android:layout_height="75dp"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="ContentDescription"
-            tools:src="@android:drawable/picture_frame"/>
+            tools:src="@android:drawable/picture_frame" />
 
         <TextView
             android:id="@+id/name"
@@ -32,10 +34,11 @@
             android:layout_marginEnd="10dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toEndOf="@+id/avatar"
-            app:layout_constraintTop_toTopOf="@+id/avatar"
-            tools:text="yalematta / kotlin-trending-repos" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            tools:text="yalematta / kotlin-trending-repos"
+            style="@style/AppTheme.Title" />
 
         <TextView
             android:id="@+id/description"
@@ -47,8 +50,10 @@
             android:maxLines="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/avatar"
-            app:layout_constraintTop_toBottomOf="@+id/name"
-            tools:text="Android App that lists trending Kotlin Github repositories" />
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            app:layout_constraintBottom_toBottomOf="@id/avatar"
+            tools:text="Android App that lists trending Kotlin Github repositories"
+            style="@style/AppTheme.Description" />
 
         <TextView
             android:id="@+id/language"
@@ -57,11 +62,12 @@
             android:layout_margin="10dp"
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
-            android:drawableTint="@color/colorPrimary"
             app:drawableStartCompat="@drawable/ic_circle"
             app:layout_constraintStart_toEndOf="@+id/avatar"
-            app:layout_constraintTop_toBottomOf="@+id/avatar"
-            tools:text="Kotlin" />
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="Kotlin"
+            style="@style/AppTheme.Description"
+            app:drawableTint="@color/colorPrimary" />
 
         <TextView
             android:id="@+id/stars"
@@ -71,10 +77,11 @@
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
             app:drawableStartCompat="@drawable/ic_star"
-            app:drawableTint="@color/colorPrimary"
+            app:drawableTint="@android:color/darker_gray"
             app:layout_constraintStart_toEndOf="@+id/language"
-            app:layout_constraintTop_toBottomOf="@+id/avatar"
-            tools:text="123" />
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="123"
+            style="@style/AppTheme.Description" />
 
         <TextView
             android:id="@+id/forks"
@@ -84,10 +91,11 @@
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
             app:drawableStartCompat="@drawable/ic_fork"
-            app:drawableTint="@color/colorPrimary"
+            app:drawableTint="@android:color/darker_gray"
             app:layout_constraintStart_toEndOf="@+id/stars"
-            app:layout_constraintTop_toBottomOf="@+id/avatar"
-            tools:text="123" />
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="123"
+            style="@style/AppTheme.Description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
