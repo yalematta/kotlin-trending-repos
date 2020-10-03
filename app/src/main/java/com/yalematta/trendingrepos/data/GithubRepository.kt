@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class TrendingRepository @Inject constructor(private val githubApi: GithubApi) {
+class GithubRepository @Inject constructor(private val githubApi: GithubApi) {
 
     fun getSearchResults(query: String) =
         Pager(
@@ -17,6 +17,6 @@ class TrendingRepository @Inject constructor(private val githubApi: GithubApi) {
                 maxSize = 100,
                 enablePlaceholders = false
             ),
-            pagingSourceFactory = { TrendingPagingSource(githubApi, query) }
+            pagingSourceFactory = { GithubPagingSource(githubApi, query) }
         ).liveData
 }

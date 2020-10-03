@@ -8,7 +8,7 @@ import java.io.IOException
 
 private const val STARTING_PAGE_INDEX = 1
 
-class TrendingPagingSource(
+class GithubPagingSource(
     private val githubApi: GithubApi,
     private val query: String
 ): PagingSource<Int, Repo>() {
