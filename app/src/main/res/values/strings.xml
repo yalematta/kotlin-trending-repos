@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TrendingRepos</string>
+    <string name="retry">Retry</string>
+    <string name="results_error">Results could not be loaded</string>
 </resources>

@@ -19,7 +19,8 @@
             android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription"
+            tools:src="@android:drawable/picture_frame"/>
 
         <TextView
             android:id="@+id/name"
@@ -54,6 +55,7 @@
             android:layout_margin="10dp"
             android:drawablePadding="5dp"
             android:gravity="center_vertical"
+            android:drawableTint="@color/colorPrimary"
             app:drawableStartCompat="@drawable/ic_circle"
             app:layout_constraintStart_toEndOf="@+id/avatar"
             app:layout_constraintTop_toBottomOf="@+id/avatar"
