@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.ui.repos
+package com.yalematta.trendingrepos.ui.repos.adapter
 
 import android.graphics.Typeface
 import android.text.Spannable

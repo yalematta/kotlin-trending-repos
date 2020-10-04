@@ -15,8 +15,10 @@ import com.google.android.material.transition.MaterialElevationScale
 import com.yalematta.trendingrepos.R
 import com.yalematta.trendingrepos.data.model.Repo
 import com.yalematta.trendingrepos.databinding.FragmentReposBinding
+import com.yalematta.trendingrepos.ui.repos.adapter.RepoClickListener
+import com.yalematta.trendingrepos.ui.repos.adapter.ReposAdapter
+import com.yalematta.trendingrepos.ui.repos.adapter.ReposLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_repos.*
 import kotlinx.android.synthetic.main.item_trending_repo.*
 import java.util.*
 

@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.ui.repos
+package com.yalematta.trendingrepos.ui.repos.adapter
 
 import com.yalematta.trendingrepos.data.model.Repo
 
