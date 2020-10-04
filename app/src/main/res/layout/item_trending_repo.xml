@@ -71,33 +71,5 @@
             style="@style/AppTheme.Description"
             app:drawableTint="@color/colorPrimary" />
 
-        <TextView
-            android:id="@+id/stars"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:drawablePadding="5dp"
-            android:gravity="center_vertical"
-            app:drawableStartCompat="@drawable/ic_star"
-            app:drawableTint="@android:color/darker_gray"
-            app:layout_constraintStart_toEndOf="@+id/language"
-            app:layout_constraintTop_toBottomOf="@+id/description"
-            tools:text="123"
-            style="@style/AppTheme.Description" />
-
-        <TextView
-            android:id="@+id/forks"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:drawablePadding="5dp"
-            android:gravity="center_vertical"
-            app:drawableStartCompat="@drawable/ic_fork"
-            app:drawableTint="@android:color/darker_gray"
-            app:layout_constraintStart_toEndOf="@+id/stars"
-            app:layout_constraintTop_toBottomOf="@+id/description"
-            tools:text="123"
-            style="@style/AppTheme.Description" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

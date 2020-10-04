@@ -7,4 +7,7 @@
     <string name="language_name">%s GitHub Repos</string>
     <string name="description">Description</string>
     <string name="open_browser">Open in Browser</string>
+    <string name="created_on">Created on:</string>
+    <string name="last_update">Last updated on:</string>
+    <string name="opened_issues">Opened issues:</string>
 </resources>

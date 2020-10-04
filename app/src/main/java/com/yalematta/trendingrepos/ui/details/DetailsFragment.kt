@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.yalematta.trendingrepos.R
 import com.yalematta.trendingrepos.data.model.Repo
+import com.yalematta.trendingrepos.internal.DateUtils
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -36,17 +37,26 @@ class DetailsFragment : Fragment() {
         repo?.let {
 
             view.findViewById<TextView>(R.id.name).text = repo.name
+
             Glide.with(view)
                 .load(repo.owner.avatar_url)
                 .centerCrop()
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .error(android.R.drawable.stat_notify_error)
                 .into(view.findViewById<ImageView>(R.id.avatar))
+
             view.findViewById<TextView>(R.id.username).text = repo.owner.login
-            view.findViewById<TextView>(R.id.description).text = repo.description
+
             view.findViewById<TextView>(R.id.language).text = repo.language
+            view.findViewById<TextView>(R.id.description).text = repo.description
+
             view.findViewById<TextView>(R.id.stars).text = repo.stars.toString()
             view.findViewById<TextView>(R.id.forks).text = repo.forks.toString()
+            view.findViewById<TextView>(R.id.watchers).text = repo.watchers.toString()
+            view.findViewById<TextView>(R.id.issuesOpened).text = repo.openIssues.toString()
+
+            view.findViewById<TextView>(R.id.createDate).text = DateUtils.formatDate(repo.createDate)
+            view.findViewById<TextView>(R.id.updateDate).text = DateUtils.formatDate(repo.updateDate)
 
             view.findViewById<TextView>(R.id.btnBrowse).setOnClickListener {
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(repo.url))

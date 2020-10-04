@@ -37,9 +37,6 @@ class RepoViewHolder(private val binding: ItemTrendingRepoBinding) :
 
             language.text = repo.language
 
-            stars.text = repo.stars.toString()
-
-            forks.text = repo.forks.toString()
         }
     }
 }

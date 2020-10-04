@@ -48,6 +48,18 @@
             app:drawableStartCompat="@drawable/ic_fork"
             app:drawableTint="@android:color/darker_gray"
             tools:text="123"
+            android:layout_marginEnd="10dp"
+            style="@style/AppTheme.Description" />
+
+        <TextView
+            android:id="@+id/watchers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_watchers"
+            app:drawableTint="@android:color/darker_gray"
+            tools:text="123"
             style="@style/AppTheme.Description" />
 
     </LinearLayout>
@@ -101,11 +113,84 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="5"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/avatar"
         app:layout_constraintTop_toBottomOf="@id/language"
         app:layout_constraintEnd_toEndOf="@id/name"
         tools:text="Android App that lists trending Kotlin Github repositories. Using MVVM, Paging 3 and Navigation Component." />
 
+    <TextView
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        android:text="@string/created_on"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/createDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/create"
+        tools:text="12 Feb 2020"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/createDate"
+        android:text="@string/last_update"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/updateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/update"
+        tools:text="12 Feb 2020"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/issues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/updateDate"
+        android:text="@string/opened_issues"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/issuesOpened"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/issues"
+        tools:text="300"
+        android:textStyle="bold"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".3"/>
 
     <Button
         android:id="@+id/btnBrowse"
@@ -115,6 +200,6 @@
         android:layout_margin="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"/>
+        app:layout_constraintTop_toBottomOf="@+id/issuesOpened"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
