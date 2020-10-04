@@ -6,8 +6,9 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.yalematta.trendingrepos.data.model.Repo
 import com.yalematta.trendingrepos.databinding.ItemTrendingRepoBinding
+import com.yalematta.trendingrepos.ui.MainActivity
 
-class ReposAdapter :
+class ReposAdapter( private val listener: RepoClickListener) :
         PagingDataAdapter<Repo, RepoViewHolder>(REPO_COMPARATOR) {
 
     companion object {
@@ -28,6 +29,10 @@ class ReposAdapter :
 
         if (currentItem != null) {
             holder.bind(currentItem)
+        }
+
+        holder.itemView.setOnClickListener {
+            listener.onRepoClickListener(currentItem)
         }
     }
 }

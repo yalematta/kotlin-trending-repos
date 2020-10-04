@@ -40,7 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/description"
             tools:text="yalematta / kotlin-trending-repos-and-a-much"
-            style="@style/AppTheme.Title" />
+            style="@style/AppTheme.Title"/>
 
         <TextView
             android:id="@+id/description"

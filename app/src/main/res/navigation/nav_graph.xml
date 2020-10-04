@@ -9,5 +9,18 @@
         android:id="@+id/reposFragment"
         android:name="com.yalematta.trendingrepos.ui.repos.ReposFragment"
         android:label="fragment_repos"
-        tools:layout="@layout/fragment_repos" />
+        tools:layout="@layout/fragment_repos" >
+        <action
+            android:id="@+id/action_repos_to_details"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.yalematta.trendingrepos.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="repo"
+            app:argType="com.yalematta.trendingrepos.data.model.Repo" />
+    </fragment>
 </navigation>
