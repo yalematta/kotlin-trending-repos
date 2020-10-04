@@ -13,8 +13,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NavUtils
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
+import androidx.transition.TransitionInflater
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.transition.MaterialContainerTransform
 import com.yalematta.trendingrepos.R
 import com.yalematta.trendingrepos.data.model.Repo
 import com.yalematta.trendingrepos.internal.DateUtils
@@ -22,6 +26,11 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DetailsFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedElementEnterTransition = MaterialContainerTransform()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,12 +47,13 @@ class DetailsFragment : Fragment() {
 
             view.findViewById<TextView>(R.id.name).text = repo.name
 
-            Glide.with(view)
-                .load(repo.owner.avatar_url)
-                .centerCrop()
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .error(android.R.drawable.stat_notify_error)
-                .into(view.findViewById<ImageView>(R.id.avatar))
+            view.findViewById<ImageView>(R.id.avatar).apply {
+                transitionName = repo.owner.avatar_url
+                Glide.with(view)
+                    .load(repo.owner.avatar_url)
+                    .error(android.R.drawable.stat_notify_error)
+                    .into(this)
+            }
 
             view.findViewById<TextView>(R.id.username).text = repo.owner.login
 
@@ -55,8 +65,10 @@ class DetailsFragment : Fragment() {
             view.findViewById<TextView>(R.id.watchers).text = repo.watchers.toString()
             view.findViewById<TextView>(R.id.issuesOpened).text = repo.openIssues.toString()
 
-            view.findViewById<TextView>(R.id.createDate).text = DateUtils.formatDate(repo.createDate)
-            view.findViewById<TextView>(R.id.updateDate).text = DateUtils.formatDate(repo.updateDate)
+            view.findViewById<TextView>(R.id.createDate).text =
+                DateUtils.formatDate(repo.createDate)
+            view.findViewById<TextView>(R.id.updateDate).text =
+                DateUtils.formatDate(repo.updateDate)
 
             view.findViewById<TextView>(R.id.btnBrowse).setOnClickListener {
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(repo.url))
@@ -82,6 +94,5 @@ class DetailsFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 
 }

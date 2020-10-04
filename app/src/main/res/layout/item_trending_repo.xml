@@ -25,7 +25,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="ContentDescription"
-            tools:src="@android:drawable/picture_frame" />
+            tools:src="@android:drawable/picture_frame"
+            android:transitionName="userAvatar" />
 
         <TextView
             android:id="@+id/name"

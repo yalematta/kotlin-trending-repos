@@ -20,7 +20,6 @@ class RepoViewHolder(private val binding: ItemTrendingRepoBinding) :
             Glide.with(itemView)
                 .load(repo.owner.avatar_url)
                 .centerCrop()
-                .transition(DrawableTransitionOptions.withCrossFade())
                 .error(android.R.drawable.stat_notify_error)
                 .into(avatar)
 
