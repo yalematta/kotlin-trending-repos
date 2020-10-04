@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.ui.repos
+package com.yalematta.trendingrepos.ui.repos.adapter
 
 import android.graphics.Typeface
 import android.text.Spannable
@@ -6,7 +6,6 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.yalematta.trendingrepos.data.model.Repo
 import com.yalematta.trendingrepos.databinding.ItemTrendingRepoBinding
 
@@ -20,7 +19,6 @@ class RepoViewHolder(private val binding: ItemTrendingRepoBinding) :
             Glide.with(itemView)
                 .load(repo.owner.avatar_url)
                 .centerCrop()
-                .transition(DrawableTransitionOptions.withCrossFade())
                 .error(android.R.drawable.stat_notify_error)
                 .into(avatar)
 
@@ -37,9 +35,6 @@ class RepoViewHolder(private val binding: ItemTrendingRepoBinding) :
 
             language.text = repo.language
 
-            stars.text = repo.stars.toString()
-
-            forks.text = repo.forks.toString()
         }
     }
 }

@@ -31,6 +31,19 @@ data class Repo(
     @SerializedName("language")
     val language: String?,
 
-    val owner: Owner
+    @SerializedName("watchers")
+    val watchers: Int,
 
-): Parcelable
+    @SerializedName("owner")
+    val owner: Owner,
+
+    @SerializedName("created_at")
+    val createDate: String,
+
+    @SerializedName("updated_at")
+    val updateDate: String,
+
+    @SerializedName("open_issues")
+    val openIssues: Int
+
+) : Parcelable
