@@ -1,19 +1,16 @@
 package com.yalematta.trendingrepos.ui.repos
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.core.app.ActivityOptionsCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.FragmentNavigatorExtras
-import com.google.android.material.transition.Hold
 import com.google.android.material.transition.MaterialElevationScale
 import com.yalematta.trendingrepos.R
 import com.yalematta.trendingrepos.data.model.Repo
@@ -42,6 +39,8 @@ class ReposFragment : Fragment(R.layout.fragment_repos), RepoClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         _binding = FragmentReposBinding.bind(view)
+
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         val adapter = ReposAdapter(this)
 

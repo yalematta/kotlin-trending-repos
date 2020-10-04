@@ -10,14 +10,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NavUtils
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.navArgs
-import androidx.transition.TransitionInflater
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.transition.MaterialContainerTransform
 import com.yalematta.trendingrepos.R
 import com.yalematta.trendingrepos.data.model.Repo
@@ -38,8 +33,6 @@ class DetailsFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_details, container, false)
-
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val repo = arguments?.getParcelable<Repo>("repo")
 
@@ -82,6 +75,8 @@ class DetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setHasOptionsMenu(true)
     }

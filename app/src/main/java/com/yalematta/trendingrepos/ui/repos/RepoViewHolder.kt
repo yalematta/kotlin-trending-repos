@@ -6,7 +6,6 @@ import android.text.SpannableString
 import android.text.style.StyleSpan
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.yalematta.trendingrepos.data.model.Repo
 import com.yalematta.trendingrepos.databinding.ItemTrendingRepoBinding
 
