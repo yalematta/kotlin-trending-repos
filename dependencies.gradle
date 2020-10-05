@@ -30,6 +30,9 @@ ext.versions = [
         hiltAndroidXVersion     : '1.0.0-alpha02',
 
         // paging 3
-        pagingVersion           : '3.0.0-alpha05'
+        pagingVersion           : '3.0.0-alpha07',
+
+        // navigation component
+        navVersion              : '2.3.0'
 
 ]

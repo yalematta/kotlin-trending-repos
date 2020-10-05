@@ -7,20 +7,24 @@
 
     <fragment
         android:id="@+id/reposFragment"
-        android:name="com.yalematta.trendingrepos.ui.repos.ReposFragment"
+        android:name="com.yalematta.trending.ui.repos.ReposFragment"
         android:label="fragment_repos"
         tools:layout="@layout/fragment_repos" >
         <action
-            android:id="@+id/action_repos_to_details"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/actionReposToDetails"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.yalematta.trendingrepos.ui.details.DetailsFragment"
+        android:name="com.yalematta.trending.ui.details.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <argument
             android:name="repo"
-            app:argType="com.yalematta.trendingrepos.data.model.Repo" />
+            app:argType="com.yalematta.trending.data.model.Repo" />
     </fragment>
 </navigation>

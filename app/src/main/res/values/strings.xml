@@ -1,13 +1,14 @@
 <resources>
-    <string name="app_name">Kotlin GitHub Repos</string>
+    <string name="app_name">Kotlin</string>
     <string name="retry">Retry</string>
     <string name="results_error">Results could not be loaded</string>
     <string name="search">Search</string>
     <string name="query">language:%s</string>
-    <string name="language_name">%s GitHub Repos</string>
     <string name="description">Description</string>
     <string name="open_browser">Open in Browser</string>
     <string name="created_on">Created on:</string>
     <string name="last_update">Last updated on:</string>
     <string name="opened_issues">Opened issues:</string>
+    <string name="no_results_found">No results found for this query</string>
+    <string name="search_query">%s</string>
 </resources>
