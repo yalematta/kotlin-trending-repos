@@ -20,9 +20,6 @@ Since there is no official API for Trending Repositories (it is one of the inter
 <br />
 I have decided to use [GitHub Search API](https://developer.github.com/v3/search/#search-repositories) and sort the repositories by their stars.
 
-## Architecture
-This app is based on MVVM architecture and a repository pattern.
-
 ## Tech stack
 - Minimum SDK level 23
 - [Kotlin](https://kotlinlang.org/) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous.
@@ -32,11 +29,12 @@ This app is based on MVVM architecture and a repository pattern.
   - Lifecycle - dispose of observing data when lifecycle state changes.
   - ViewModel - UI related data holder, lifecycle aware.
   - Navigation Component - handle everything needed for in-app navigation.
+  - Data Binding - declaratively bind observable data to UI elements.
 - Architecture
   - MVVM Architecture (View - DataBinding - ViewModel - Model)
   - Repository pattern
+- [Glide](https://github.com/bumptech/glide) - loading images.
 - [Retrofit2 & OkHttp3](https://github.com/square/retrofit) - construct the REST APIs and paging network data.
-- [Glide](https://github.com/bumptech/glide), [GlidePalette](https://github.com/florent37/GlidePalette) - loading images.
 - [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
 
 
