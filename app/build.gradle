@@ -10,7 +10,7 @@ android {
     compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        applicationId "com.yalematta.trendingrepos"
+        applicationId "com.yalematta.trending"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.compileSdk
         versionCode versions.versionCode
@@ -60,7 +60,7 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutinesVersion"
 
-    // navigation components
+    // navigation component
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation "androidx.navigation:navigation-fragment-ktx:$versions.navVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$versions.navVersion"

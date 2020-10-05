@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.data.model
+package com.yalematta.trending.data.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.api
+package com.yalematta.trending.api
 
 import retrofit2.http.GET
 import retrofit2.http.Query

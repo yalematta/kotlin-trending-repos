@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.ui.repos
+package com.yalematta.trending.ui.repos
 
 import android.graphics.Color
 import android.os.Bundle
@@ -13,17 +13,13 @@ import androidx.appcompat.widget.SearchView.SearchAutoComplete
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.paging.LoadState
-import com.yalematta.trendingrepos.R
-import com.yalematta.trendingrepos.data.model.Languages
-import com.yalematta.trendingrepos.data.model.Repo
-import com.yalematta.trendingrepos.databinding.FragmentReposBinding
-import com.yalematta.trendingrepos.ui.repos.adapter.ReposAdapter
-import com.yalematta.trendingrepos.ui.repos.adapter.ReposLoadStateAdapter
+import com.yalematta.trending.R
+import com.yalematta.trending.data.model.Languages
+import com.yalematta.trending.databinding.FragmentReposBinding
+import com.yalematta.trending.ui.repos.adapter.ReposAdapter
+import com.yalematta.trending.ui.repos.adapter.ReposLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.item_trending_repo.*
 import java.util.*
 
 

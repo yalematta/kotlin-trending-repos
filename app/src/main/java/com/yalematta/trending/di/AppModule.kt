@@ -1,6 +1,6 @@
-package com.yalematta.trendingrepos.di
+package com.yalematta.trending.di
 
-import com.yalematta.trendingrepos.api.GithubApi
+import com.yalematta.trending.api.GithubApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

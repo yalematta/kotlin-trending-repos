@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.ui.repos.adapter
+package com.yalematta.trending.ui.repos.adapter
 
 import android.graphics.Typeface
 import android.text.Spannable
@@ -8,17 +8,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.yalematta.trendingrepos.data.model.Repo
-import com.yalematta.trendingrepos.databinding.ItemTrendingRepoBinding
-import com.yalematta.trendingrepos.ui.repos.ReposFragmentDirections
-import kotlinx.android.synthetic.main.item_trending_repo.*
+import com.yalematta.trending.data.model.Repo
+import com.yalematta.trending.databinding.ItemTrendingRepoBinding
+import com.yalematta.trending.ui.repos.ReposFragmentDirections
 
 class ReposAdapter: PagingDataAdapter<Repo, ReposAdapter.ViewHolder>(REPO_COMPARATOR) {
 

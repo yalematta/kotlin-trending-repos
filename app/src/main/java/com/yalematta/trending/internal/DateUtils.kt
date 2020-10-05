@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.internal
+package com.yalematta.trending.internal
 
 import android.util.Log
 import java.text.SimpleDateFormat

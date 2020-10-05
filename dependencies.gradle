@@ -32,7 +32,7 @@ ext.versions = [
         // paging 3
         pagingVersion           : '3.0.0-alpha07',
 
-        // navigation components
+        // navigation component
         navVersion              : '2.3.0'
 
 ]

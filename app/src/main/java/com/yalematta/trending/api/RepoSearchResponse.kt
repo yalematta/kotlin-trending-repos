@@ -1,7 +1,7 @@
-package com.yalematta.trendingrepos.api
+package com.yalematta.trending.api
 
 import com.google.gson.annotations.SerializedName
-import com.yalematta.trendingrepos.data.model.Repo
+import com.yalematta.trending.data.model.Repo
 
 data class RepoSearchResponse(
 

@@ -1,4 +1,4 @@
-package com.yalematta.trendingrepos.ui.repos
+package com.yalematta.trending.ui.repos
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.yalematta.trendingrepos.data.GithubRepository
+import com.yalematta.trending.data.GithubRepository
 
 class ReposViewModel @ViewModelInject constructor (
     private val repository: GithubRepository

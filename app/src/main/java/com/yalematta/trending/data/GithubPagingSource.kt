@@ -1,8 +1,8 @@
-package com.yalematta.trendingrepos.data
+package com.yalematta.trending.data
 
 import androidx.paging.PagingSource
-import com.yalematta.trendingrepos.api.GithubApi
-import com.yalematta.trendingrepos.data.model.Repo
+import com.yalematta.trending.api.GithubApi
+import com.yalematta.trending.data.model.Repo
 import retrofit2.HttpException
 import java.io.IOException
 
