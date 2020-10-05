@@ -13,7 +13,7 @@ Android App that lists trending Kotlin Github repositories
 </p>
 
 ## Download
-Go to the [Releases](https://github.com/skydoves/Pokedex/releases) to download the lastest APK.
+Go to the [Releases](https://github.com/yalematta/kotlin-trending-repos/releases) to download the lastest APK.
 
 ## API
 Since there is no official API for Trending Repositories (it is one of the internal GitHub API’s),
