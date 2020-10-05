@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 apply from: '../dependencies.gradle'
 
 android {
@@ -49,9 +50,6 @@ dependencies {
     implementation "com.google.android.material:material:$versions.materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintVersion"
 
-    // architecture components
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-
     // network
     implementation "com.squareup.retrofit2:retrofit:$versions.retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion"
@@ -59,10 +57,13 @@ dependencies {
 
     // coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutinesVersion"
+
+    // navigation components
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.navVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.navVersion"
 
     // glide
     implementation "com.github.bumptech.glide:glide:$versions.glideVersion"
