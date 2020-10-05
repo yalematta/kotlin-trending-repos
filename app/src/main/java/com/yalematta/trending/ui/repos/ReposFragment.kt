@@ -122,11 +122,7 @@ class ReposFragment : Fragment(R.layout.fragment_repos) {
                 val languageQuery = String.format(getString(R.string.query), queryString)
                 viewModel.searchRepos(languageQuery)
                 searchView.clearFocus()
-                (activity as AppCompatActivity).supportActionBar?.title =
-                    String.format(
-                        getString(R.string.language_name),
-                        queryString.capitalize(Locale.ROOT)
-                    )
+                (activity as AppCompatActivity).supportActionBar?.title = queryString.capitalize(Locale.ROOT)
             }
     }
 
