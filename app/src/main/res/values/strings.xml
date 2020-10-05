@@ -10,4 +10,6 @@
     <string name="created_on">Created on:</string>
     <string name="last_update">Last updated on:</string>
     <string name="opened_issues">Opened issues:</string>
+    <string name="no_results_found">No results found for this query</string>
+    <string name="search_query">%s</string>
 </resources>
